@@ -1,4 +1,18 @@
 import java.util.ArrayList;
+
+class Process{
+	int pid;
+	String Process_name;
+	int burst_time;
+	int no_of_inst;
+	Process(int pid,String Process_name,int burst_time,int no_of_inst){
+		this.pid=pid;
+		this.Process_name=Process_name;
+		this.burst_time=burst_time;
+		this.no_of_inst=no_of_inst;
+	}
+}
+
 class ProcessManager{
 	ArrayList<Process> a;
 	ProcessManager(){
@@ -8,6 +22,7 @@ class ProcessManager{
 		a.add(p);
 	}
 	void exeProcess(){
+		int smallest;
 		/*for(Process itr:a){
 			System.out.println(itr.pid+":"+itr.Process_name);
 		}*///Using advance for loop
@@ -29,24 +44,12 @@ class ProcessManager{
 	}
 	public static void main(String []args){
 		Process p1=new Process(1,"chrome",21,10);
-		Process p2=new Process(2,"notepad",21,10);
+		Process p2=new Process(2,"notepad",2,10);
 		Process p3=new Process(3,"music player",4,3);
 		ProcessManager pm=new ProcessManager();
 		pm.addProcess(p1);
 		pm.addProcess(p2);
 		pm.addProcess(p3);
 		pm.exeProcess();
-	}
-}
-class Process{
-	int pid;
-	String Process_name;
-	int burst_time;
-	int no_of_inst;
-	Process(int pid,String Process_name,int burst_time,int no_of_inst){
-		this.pid=pid;
-		this.Process_name=Process_name;
-		this.burst_time=burst_time;
-		this.no_of_inst=no_of_inst;
 	}
 }

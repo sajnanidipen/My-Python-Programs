@@ -1,0 +1,20 @@
+How to Execute ?
+
+You have to Open 3 cmd Prompt to execute RMI Program 
+
+open cmd prompt
+
+>javac Convertor.java                      
+>javac CurrencyConvertor.java
+>java CurrencyConvertor
+>javac RMI_Server.jav
+>rmiregistry
+
+
+Open new cmd prompt
+>javac RMI_Client.java
+>java RMI_Server
+
+
+Open new cmd prompt
+>java RMI_Client
